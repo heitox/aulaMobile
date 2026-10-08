@@ -17,94 +17,29 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
         />
 
-    <!-- EQUIPAMENTO -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layoutEquipamento"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:hint="Equipamento"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph"
         app:layout_constraintTop_toBottomOf="@id/toolbarTop"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtEquipamento"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:singleLine="true" />
 
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <!-- PATRIMÔNIO -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layoutPatrimonio"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="Nº do patrimônio"
-        app:layout_constraintTop_toBottomOf="@id/layoutEquipamento"
+        app:menu="@menu/menu_bottom_nav"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtPatrimonio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:singleLine="true" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <!-- E-MAIL -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layoutEmail"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="E-mail para retorno"
-        app:layout_constraintTop_toBottomOf="@id/layoutPatrimonio"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:singleLine="true" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <!-- BOTÃO -->
-    <Button
-        android:id="@+id/btnAbrirChamado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="ABRIR CHAMADO"
-        app:layout_constraintTop_toBottomOf="@id/layoutEmail"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:backgroundTint="@color/black"/>
-
-    <Button
-        android:id="@+id/btnAcessaConf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Acessar configurações"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@+id/btnAbrirChamado"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="15dp"
-        android:backgroundTint="@color/black"
-        />
-
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
