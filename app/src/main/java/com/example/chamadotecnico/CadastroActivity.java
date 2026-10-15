@@ -76,13 +76,13 @@ public class CadastroActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item){
 
-        if (item.getItemId() == R.id.menu_config){
+        if (item.getItemId() == R.id.action_config){
             Toast.makeText(this, "Configurações Selecionadas",
                     Toast.LENGTH_SHORT).show();
             return true;
         }
 
-        if(item.getItemId() == R.id.menu_sobre){
+        if(item.getItemId() == R.id.action_sobre){
             Intent intent = new Intent(CadastroActivity.this, SobreActivity.class);
             startActivity(intent);
             return true;

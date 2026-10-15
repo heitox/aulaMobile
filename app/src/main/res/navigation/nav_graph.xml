@@ -2,19 +2,27 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/HomeFragment"
-    >
+    app:startDestination="@id/inicioFragment">
 
     <fragment
-        android:id="@+id/HomeFragment"
-        android:name="com.example.chamadotecnico.HomeFragment"
-        android:label="Home"
-        />
+        android:id="@+id/inicioFragment"
+        android:name="com.example.chamadotecnico.InicioFragment"
+        android:label="Início"
+        tools:layout="@layout/fragment_inicio"
+        xmlns:tools="http://schemas.android.com/tools" />
 
     <fragment
-        android:id="@+id/PerfilFragment"
+        android:id="@+id/disciplinasFragment"
+        android:name="com.example.chamadotecnico.DisciplinasFragment"
+        android:label="Disciplinas"
+        tools:layout="@layout/fragment_disciplinas"
+        xmlns:tools="http://schemas.android.com/tools" />
+
+    <fragment
+        android:id="@+id/perfilFragment"
         android:name="com.example.chamadotecnico.PerfilFragment"
         android:label="Perfil"
-        />
+        tools:layout="@layout/fragment_perfil"
+        xmlns:tools="http://schemas.android.com/tools" />
 
 </navigation>

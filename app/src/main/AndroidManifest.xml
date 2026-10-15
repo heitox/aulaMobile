@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ChamadoTecnico">
         <activity
+            android:name=".LembreteActivity"
+            android:exported="false" />
+        <activity
             android:name=".ConfiguracoesActivity"
             android:exported="false" />
         <activity

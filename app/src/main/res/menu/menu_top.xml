@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <item
-        android:id="@+id/menu_config"
-        android:title="Config"
+        android:id="@+id/action_config"
+        android:title="Configurações"
         android:icon="@android:drawable/ic_menu_manage"
-        app:showAsAction="always"
-        />
+        app:showAsAction="always" />
 
     <item
-        android:id="@+id/menu_sobre"
+        android:id="@+id/action_sobre"
         android:title="Sobre"
-        app:showAsAction="never"/>
-
-    <item
-        android:id="@+id/menu_cadastro"
-        android:title="Cadastro"
-        app:showAsAction="never"/>
+        app:showAsAction="never" />
 
 </menu>
