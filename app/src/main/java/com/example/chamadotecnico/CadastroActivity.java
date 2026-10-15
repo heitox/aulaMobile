@@ -30,8 +30,8 @@ public class CadastroActivity extends AppCompatActivity {
             return insets;
         });
 
-        MaterialToolbar toolbar = findViewById(R.id.toolbarTop); //pegamos o material xml e linkamos ao java
-        setSupportActionBar(toolbar); // esse toolbar vai ser usado para navegar entre as telas
+        MaterialToolbar toolbar = findViewById(R.id.toolbarTop);
+        setSupportActionBar(toolbar);
 
         if (getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -41,44 +41,33 @@ public class CadastroActivity extends AppCompatActivity {
         Button btnSalvar = findViewById(R.id.btnSalvar);
 
         btnSalvar.setOnClickListener(v -> {
-            String chamado = edtChamado
-                    .getText().toString().trim();
+            String chamado = edtChamado.getText().toString().trim();
 
             if (chamado.isEmpty()){
-                edtChamado.setError(
-                        "Digite a descrição do chamado"
-                );
+                edtChamado.setError("Digite a descrição do chamado");
                 return;
             }
 
-            Toast.makeText(CadastroActivity.this, //vai aparecer após apertar o botão se der certo
-                    "Chamado registrado",
-                    Toast.LENGTH_SHORT)
-                    .show();
-
+            Toast.makeText(CadastroActivity.this, "Chamado registrado", Toast.LENGTH_SHORT).show();
         });
-
     }
 
     @Override
     public boolean onSupportNavigateUp() {
-        finish(); //fecha a activity que estavamos e volta para mim
+        finish();
         return true;
     }
 
-    //definindo as opções do menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menu_top, menu);
-        return  true;
+        return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item){
-
         if (item.getItemId() == R.id.action_config){
-            Toast.makeText(this, "Configurações Selecionadas",
-                    Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Configurações Selecionadas", Toast.LENGTH_SHORT).show();
             return true;
         }
 
@@ -88,8 +77,6 @@ public class CadastroActivity extends AppCompatActivity {
             return true;
         }
 
-
-        return super.onOptionsItemSelected(item); //
+        return super.onOptionsItemSelected(item);
     }
-
 }

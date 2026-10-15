@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
             NavController navController = navHostFragment.getNavController();
             NavigationUI.setupWithNavController(bottomNav, navController);
             
-            // Opcional: Desafio extra para mudar o título da toolbar
             navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
                 getSupportActionBar().setTitle(destination.getLabel());
             });
